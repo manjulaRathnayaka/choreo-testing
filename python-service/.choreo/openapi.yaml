@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: Greeting Service
+  version: 1.0.0
+  description: A simple service to greet users.
+
+
+paths:
+  /greet:
+    get:
+      summary: Get a greeting message
+      responses:
+        '200':
+          description: Greeting message returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello, World!"
